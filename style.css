@@ -77,3 +77,14 @@ p {
 .machine-score span {
     color: #ff1744;
 }
+
+.result {
+    font-size: 30px;
+    background: linear-gradient(90deg, #ff416c, #7c3aed, #00c6ff);
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
