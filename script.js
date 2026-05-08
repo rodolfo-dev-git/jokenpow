@@ -57,16 +57,43 @@ const playGame = (human, machine) => {
     }
 }
 
+const part1 = document.querySelector('#first');
+const part2 = document.querySelector('#second');
+const part3 = document.querySelector('#third');
 
 const animateTitle = () => {
-    title.innerHTML = "Jo";
+    // title.innerHTML = "Jo";
+
+    // setTimeout(() => {
+    //     title.innerHTML = "Joken";
+    // }, 300);
+
+    // setTimeout(() => {
+    //     title.innerHTML = "JokenPô";
+    // }, 600);
+
+
+    part1.classList.add('animate', 'color1');
 
     setTimeout(() => {
-        title.innerHTML = "Joken";
+        part1.classList.remove('animate');
+
+        part2.classList.add('animate', 'color2');
     }, 300);
 
     setTimeout(() => {
-        title.innerHTML = "JokenPô";
+        part2.classList.remove('animate');
+
+        part3.classList.add('animate', 'color3');
     }, 600);
+
+    setTimeout(() => {
+        part3.classList.remove('animate');
+        part1.classList.remove('color1');
+        part2.classList.remove('color2');
+        part3.classList.remove('color3');
+    }, 900);
+    
 }
+
 

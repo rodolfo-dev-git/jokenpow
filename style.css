@@ -88,3 +88,25 @@ p {
     color: transparent;
     -webkit-text-fill-color: transparent;
 }
+
+.title span {
+    display: inline-block;
+    /* color: black; */
+    transition: all 0.3s ease;
+}
+
+.animate {
+    transform: scale(1.6);
+}
+
+.color1 {
+    color: #ff3c68;
+}
+
+.color2 {
+    color: #00c3ff;
+}
+
+.color3 {
+    color: #9b5cff;
+}
