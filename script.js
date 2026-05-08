@@ -7,18 +7,23 @@ const title = document.querySelector('.title');
 let scorePlayer = 0;
 let scoreMachine = 0;
 
+const part1 = document.querySelector('#first');
+const part2 = document.querySelector('#second');
+const part3 = document.querySelector('#third');
+
+const GAME_OPTIONS = {
+    ROCK: 'rock',
+    PAER: 'paper',
+    SCISSORS: 'scissors'
+}
 
 
 const playHuman = (choiceHuman) => {
-    console.log(choiceHuman);
+    // console.log(choiceHuman);
 
     result.innerHTML = "";
     animateTitle();
 
-
-
-
-    console.log("pronto")
     // playGame(choiceHuman, playMachine());
 
     const machineChoice = playMachine();
@@ -29,10 +34,8 @@ const playHuman = (choiceHuman) => {
 }
 
 const playMachine = () => {
-    const choices = ['rock', 'paper', 'scissors'];
+    const choices = [GAME_OPTIONS.ROCK, GAME_OPTIONS.PAPER, GAME_OPTIONS.SCISSORS];
     const randomNumber = Math.floor(Math.random() * 3);
-
-
 
     return choices[randomNumber];
 }
@@ -41,12 +44,11 @@ const playMachine = () => {
 const playGame = (human, machine) => {
     console.log('Humano: ' + human + " Maquina: " + machine)
 
-
     if (human === machine) {
         result.innerHTML = "Deu empate!";
-    } else if ((human === 'paper' && machine === 'rock') ||
-        (human === 'scissors' && machine === 'paper') ||
-        (human === 'rock' && machine === 'scissors')) {
+    } else if ((human === GAME_OPTIONS.PAPER && machine === GAME_OPTIONS.ROCK) ||
+        (human === GAME_OPTIONS.SCISSORS && machine === GAME_OPTIONS.PAPER) ||
+        (human === GAME_OPTIONS.ROCK && machine === GAME_OPTIONS.SCISSORS)) {
         scorePlayer++;
         myScore.innerHTML = scorePlayer;
         result.innerHTML = "Você ganhou!";
@@ -57,9 +59,6 @@ const playGame = (human, machine) => {
     }
 }
 
-const part1 = document.querySelector('#first');
-const part2 = document.querySelector('#second');
-const part3 = document.querySelector('#third');
 
 const animateTitle = () => {
     // title.innerHTML = "Jo";
